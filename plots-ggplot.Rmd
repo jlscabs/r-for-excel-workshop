@@ -19,3 +19,9 @@ ca_np <- read.csv(here("data", "ca_np.csv"))
 ci_np <- read_excel(here("data", "ci_np.xlsx"))
 ```
 
+```{r}
+gg_base <- ggplot(data = ci_np, aes(x=year,y=visitors))
+gg_base +
+  geom_col(aes(fill = visitors))
+```
+
